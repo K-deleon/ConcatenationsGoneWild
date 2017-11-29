@@ -12,16 +12,17 @@ public class Main {
 
     }
 
-    public String cat(int s, int e){
-        int startPos = s;
-        int endPos = e;
+    private static String cat(int start, int end){
+        int startPos = start;
+        int endPos = end;
 
         char startChar = (char)startPos;
 
 
         StringBuffer ss = new StringBuffer(startChar);
-        for(int j = startPos; j < endPos; startChar++){
-            ss.append(startChar + 1);
+        for(int j = startPos; j < endPos; startPos++){
+            startChar = (char)startPos;
+            ss.append(startChar);
         }
 
         String sa = ss.toString();
